@@ -1,3 +1,4 @@
+// Basic Setup for Express and Mongoose
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
