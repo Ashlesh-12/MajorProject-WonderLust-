@@ -8,9 +8,12 @@ const listingSchema = new Schema({
     },
     description: String,
     image: {
-        type: String,
-        default: "https://unsplash.com/photos/a-man-standing-on-top-of-a-lush-green-hillside-h1q2CM-at0Q",
-        set: (v) => v === "" ? "https://unsplash.com/photos/a-man-standing-on-top-of-a-lush-green-hillside-h1q2CM-at0Q": v,
+        filename: String,
+        url: {
+            type: String,
+            default: "https://unsplash.com/photos/a-man-standing-on-top-of-a-lush-green-hillside-h1q2CM-at0Q",
+            set: (v) => v === "" ? "https://unsplash.com/photos/a-man-standing-on-top-of-a-lush-green-hillside-h1q2CM-at0Q": v,
+        },
     },
     price: Number,
     location: String,
